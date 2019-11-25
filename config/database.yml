@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: lifehacksharing_production
-  username: lifehacksharing
-  password: <%= ENV['LIFEHACKSHARING_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
