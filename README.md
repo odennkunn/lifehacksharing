@@ -6,7 +6,7 @@
   - capistranoによるAWS EC2への自動デプロイ
   - ActiveStorageを使用しAWS S3への画像アップロード
 
-## 実装機能
+## Function
   - ユーザー管理機能(ユーザー登録/ログイン/ログアウト)
   - 投稿機能/編集機能
   - 投稿一覧閲覧機能
@@ -19,7 +19,7 @@
   - 画像アップロード機能
   - いいね機能
 
-## 使用技術一覧
+## application technology
 |種別|名称|
 |------|----|
 |開発言語|Ruby(ver.2.5.1)|
@@ -33,12 +33,12 @@
 |自動デプロイ|capistrano|
 |ユーザー管理|devise|
 
-# DB設計
+# DataBase
 
-## ER図
+## Entity Relationship Diagram
 <img width="627" alt="スクリーンショット 2019-11-25 22 01 23" src="https://user-images.githubusercontent.com/55783692/69542659-45af8880-0fcf-11ea-822f-2d9a4f0a1fba.png">
 
-### usersテーブル
+### users table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
@@ -49,7 +49,7 @@
   - has_many :comments, dependent: :destroy
   - has_many :likes, dependent: :destroy
 
-### articlesテーブル
+### articles table
 |Column|Type|Options|
 |------|----|-------|
 |title|string|null: false|
@@ -64,7 +64,7 @@
   - has_many :comments, dependent: :destroy
   - has_many :likes, dependent: :destroy
 
-### commentsテーブル
+### comments table
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|foreign_key: true|
@@ -75,7 +75,7 @@
   - belongs_to :user
   - belongs_to :article
 
-### categoriesテーブル
+### categories table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -83,7 +83,7 @@
 #### association
   - has_many :articles
 
-### likesテーブル
+### likes table
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|foreign_key: true|
