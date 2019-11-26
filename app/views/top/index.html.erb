@@ -1,10 +1,18 @@
-<div class = "title">
+<div class = 'title'>
   <h1>LHS</h1>
   <h2>Life Hack Sharing</h2>
-  <p class = "about">ここで扱うライフハックとは,豆知識的な便利術を進化させたものです。<br>
+  <p class = 'about'>ここで扱うライフハックとは,豆知識的な便利術を進化させたものです。<br>
   LHSは日常生活での「困った」を解決してくれる様々なライフハックを投稿、共有するサイトです。
   </p>
-  <div class = continue-button>
-    <a href = "">start!!</a>
+  <div class = 'btnlist'>
+    <div class = 'btnlist__continue'>
+      <%= link_to 'アカウントを作成せず始める', '', class: 'btnlist__continue--start'%>
+    </div>
+    <div class = 'btnlist__continue'>
+      <%= link_to '新規登録', '', class: 'btnlist__continue--signup'%>
+    </div>
+    <div class = 'btnlist__continue'>
+      <%= link_to 'ログイン', '', class: 'btnlist__continue--login'%>
+    </div>
   </div>
 </div>
