@@ -9,10 +9,10 @@
       <%= link_to 'アカウントを作成せず始める', '/articles', class: 'btnlist__continue--start'%>
     </div>
     <div class = 'btnlist__continue'>
-      <%= link_to '新規登録', '', class: 'btnlist__continue--signup'%>
+      <%= link_to '新規登録', new_user_registration_path, class: 'btnlist__continue--signup'%>
     </div>
     <div class = 'btnlist__continue'>
-      <%= link_to 'ログイン', '', class: 'btnlist__continue--login'%>
+      <%= link_to 'ログイン', new_user_session_path, class: 'btnlist__continue--login'%>
     </div>
   </div>
 </div>

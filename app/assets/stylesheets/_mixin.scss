@@ -57,3 +57,10 @@
   padding-top: 3px;
   font-size: 20px;
 }
+
+// border-bottom
+@mixin border-bottom {
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #DDDDDD;
+}
