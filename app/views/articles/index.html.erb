@@ -8,8 +8,9 @@
       <input type = "submit"  id = "search-btn" value = "検索" />
     </form>
   </div>
+  <% if user_signed_in? %>
   <div class = "header__name">
-    <span>name</span>
+    <span><%= current_user.name %></span>
   </div>
   <div class = "header__new">
     <%= link_to '投稿する', ''%>
@@ -20,54 +21,56 @@
   <div class = "header__btn">
     <%= link_to "ログアウト", '', method: :delete, class: 'post'%>
   </div>
-  <style>/*
+  <% else %>
   <div class = "header__btn">
     <%= link_to "ログイン", '', class: 'post' %>
   </div>
   <div class = "header__create">
     <%= link_to "新規登録", '', class: 'post'%>
   </div>
-  */</style>
+  <% end %>
 </div>
 
-<div class = "filters">
-  <ul class = "filters__category">
-    <li><%= link_to 'All', '' %></li>
-    <li><%= link_to 'Cook', '' %></li>
-    <li><%= link_to 'Clean', '' %></li>
-    <li><%= link_to 'Beauty', '' %></li>
-    <li><%= link_to 'Other', '' %></li>
-  </ul>
-</div>
+<div class = "contents">
+  <div class = "filters">
+    <ul class = "filters__category">
+      <li><%= link_to 'All', '' %></li>
+      <li><%= link_to 'Cook', '' %></li>
+      <li><%= link_to 'Clean', '' %></li>
+      <li><%= link_to 'Beauty', '' %></li>
+      <li><%= link_to 'Other', '' %></li>
+    </ul>
+  </div>
 
-<div class = "popular">
-  <span>人気投稿</span>
-  <section class="card">
-    <a href = "">
-      <img class="card__img" src="https://publicdomainq.net/images/201710/07s/publicdomainq-0014143ddc.jpg" alt="">
-      <div class="card__content">
-        <h1 class="card__text">title</h1>
-      </div>
-      <div class = "card__likes">
-        <i class="fas fa-heart"></i>
-        <p>3</p>
-      </div>
-    </a>
-  </section>
-</div>
+  <div class = "popular">
+    <span>人気投稿</span>
+    <section class="card">
+      <a href = "">
+        <img class="card__img" src="https://publicdomainq.net/images/201710/07s/publicdomainq-0014143ddc.jpg" alt="">
+        <div class="card__content">
+          <h1 class="card__text">title</h1>
+        </div>
+        <div class = "card__likes">
+          <i class="fas fa-heart"></i>
+          <p>3</p>
+        </div>
+      </a>
+    </section>
+  </div>
 
-<div class = "arrival">
-  <span>新着記事</span>
-  <section class="card">
-    <a href = "">
-      <img class="card__img" src="https://publicdomainq.net/images/201710/07s/publicdomainq-0014143ddc.jpg" alt="">
-      <div class="card__content">
-        <h1 class="card__text">title2</h1>
-      </div>
-      <div class = "card__likes">
-        <i class="fas fa-heart"></i>
-        <p>3</p>
-      </div>
-    </a>
-  </section>
+  <div class = "arrival">
+    <span>新着記事</span>
+    <section class="card">
+      <a href = "">
+        <img class="card__img" src="https://publicdomainq.net/images/201710/07s/publicdomainq-0014143ddc.jpg" alt="">
+        <div class="card__content">
+          <h1 class="card__text">title2</h1>
+        </div>
+        <div class = "card__likes">
+          <i class="fas fa-heart"></i>
+          <p>3</p>
+        </div>
+      </a>
+    </section>
+  </div>
 </div>

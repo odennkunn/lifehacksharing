@@ -64,3 +64,13 @@
   border-width: 1px;
   border-color: #DDDDDD;
 }
+
+@mixin btn-blue {
+  color: $dark-blue;
+  text-decoration: none;
+}
+
+@mixin input-radius {
+  border-radius: 3px;
+  border: 1px solid $border-gray;
+}
