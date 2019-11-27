@@ -11,7 +11,8 @@
   height: 70px;
   line-height: 70px;
   text-align: center;
-  &--logo {
+  a {
+    text-decoration: none;
     color:$dark-blue;
     font-weight: bold;
     font-size: 25px;
@@ -99,9 +100,7 @@
     height: 60px;
     width: 1200px;
     margin: 0 auto;
-    border-bottom: solid;
-    border-width: 1px;
-    border-color: #DDDDDD	;
+    @include border-bottom;
 
     &__category {
       display: flex;
