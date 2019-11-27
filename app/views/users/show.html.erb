@@ -1,0 +1,30 @@
+<div class = 'header'>
+  <%= render partial: 'shared/header'%>
+</div>
+
+<div class = 'block'>
+  <div class = 'block__user'>
+    <div class = 'block__user__image'>
+      <i class="fas fa-user"></i>
+    </div>
+    <div class = 'block__user__name'>
+      <span><%= current_user.nickname %></span>
+    </div>
+  </div>
+
+  <ul class = 'block__choice'>
+    <li><%= link_to '投稿した記事一覧', '' %></li>
+    <li><%= link_to 'いいねした記事一覧', '' %></li>
+  </ul>
+
+  <div class = 'mypost'>
+    <%= render partial: 'shared/card'%>
+    <%= render partial: 'shared/card'%>
+    <%= render partial: 'shared/card'%>
+    <%= render partial: 'shared/card'%>
+    <%= render partial: 'shared/card'%>
+    <%= render partial: 'shared/card'%>
+    <%= render partial: 'shared/card'%>
+    <%= render partial: 'shared/card'%>
+  </div>
+</div>

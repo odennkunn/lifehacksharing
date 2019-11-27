@@ -1,11 +1,11 @@
-//タイトルページ　ボタン部分
+//タイトルページ ボタン部分
 @mixin link-text {
   text-decoration: none;
   line-height: 80px;
   color: white;
 }
 
-// トップページ　記事周り
+// トップページ 記事周り
 @mixin box {
   height: 600px;
   width: 1200px;
