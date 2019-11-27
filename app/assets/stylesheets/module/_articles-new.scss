@@ -1,0 +1,104 @@
+//ヘッダー部分
+.post-header {
+  height: 80px;
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    font-weight: bold;
+    color: $dark-blue;
+    font-size: 50px;
+  }
+}
+
+//フォーム部分
+.postbox {
+  width: 100vw;
+  height: 1100px;
+  background-color: $back-gray;
+  position: relative;
+  &__card {
+    width: 800px;
+    height: 1000px;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    left: 300px;
+    .label {
+      display: flex;
+      p {
+        background-color: red;
+        color: white;
+        height: 25px;
+        width: 40px;
+        border-radius: 3px;
+        font-size: 15px;
+        text-align: center;
+        line-height: 25px;
+        font-weight: bold;
+        margin-top: 52px;
+        margin-left: 15px;
+      }
+      h3 {
+        font-size: 20px;
+        padding-top: 50px;
+        padding-left: 30px;
+        font-weight: bold;
+      }
+    }
+    label {
+      background-color: $dark-blue;
+      border-radius: 2px;
+      display: inline-block;
+      width: 130px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      position: absolute;
+      top: 180px;
+      left: 300px;
+      color: white;
+      input {
+        display: none;
+      }
+    }
+    .preview {
+      height: 200px;
+      width: 200px;
+      border: dotted;
+      border-width: 2px;
+      border-color: $border-gray;
+      margin: 30px 50px;
+      &__image {
+        min-height: 200px;
+        min-width: 200px;
+      }
+    }
+    .post-input {
+      margin: 20px 30px;
+      width: 470px;
+      height: 40px;
+      @include input-radius;
+    }
+    textarea {
+      margin: 20px 30px;
+      @include input-radius;
+    }
+    select {
+      margin: 20px 30px;
+      height: 40px;
+      width: 120px;
+    }
+    .send {
+      background-color: $dark-blue;
+      width: 100px;
+      height: 40px;
+      color: white;
+      line-height: 40px;
+      text-align: center;
+      position: absolute;
+      left: 360px;
+      bottom: 30px;
+    }
+  }
+}
