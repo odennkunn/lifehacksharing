@@ -32,6 +32,7 @@
   margin: auto;
   box-shadow: 0 2px 5px #ccc;
   position: relative;
+  display: inline-block;
 }
 
 @mixin card-img {
