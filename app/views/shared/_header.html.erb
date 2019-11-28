@@ -9,7 +9,7 @@
 </div>
 <% if user_signed_in? %>
 <div class = "header__name">
-  <span><%= current_user.nickname %></span>
+  <span><%= current_user.nickname %>さん</span>
 </div>
 <div class = "header__new">
   <%= link_to '投稿する', new_article_path %>
