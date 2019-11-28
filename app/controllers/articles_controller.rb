@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   
   def index
+    @articles = Article.includes(:user).page(params[:page]).per(10).order("created_at DESC")
   end
 
   def new
@@ -8,9 +9,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = Article.create(article_params)
     if @article.save
-      redirect_to action: :index
+      redirect_to articles_path
     else
       render action: :new
     end
