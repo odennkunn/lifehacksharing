@@ -1,0 +1,36 @@
+<div class = 'header'>
+  <%= render partial: 'shared/header'%>
+</div>
+
+<div class = 'main'>
+
+  <div class = 'main__title'>
+    <%= simple_format(@article.title) %>
+  </div>
+
+  <div class = 'main__image'>
+    <div class = 'main__image__box'>
+      <%= image_tag @article.image.url, class: 'main__image__box--pic'%>
+    </div>
+  </div>
+
+  <div class = 'main__text'>
+    <%= simple_format(@article.text) %>
+  </div>
+
+  <hr>
+
+  <div class = 'main__index'>
+    <span>コメント一覧</span>
+  </div>
+
+  <div class = 'main__comment'>
+    <div class = 'main__comment__user'>
+      <div class = 'main__comment__user__image'>
+      </div>
+      <div class = 'main__comment__user__text'>
+        <span>なかなかいいアイデアですね！！</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+.main {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+  }
+  &__image {
+    height: 100%;
+    &__box {
+      height: 400px;
+      width: 500px;
+      padding-top: 50px;
+      margin: 0 auto;
+      &--pic{
+        width: 500px;
+        height: 400px;
+      }
+    }
+  }
+  &__text {
+    width: 700px;
+    height: 200px;
+    margin: 20px auto 40px;
+  }
+  hr {
+    size: 1000px;
+    width: 1000px;
+  }
+  &__index {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 100px;
+    padding-top: 30px;
+
+  }
+  &__comment {
+    height: 100%;
+    &__user {
+      height: 150px;
+      width: 1200px;
+      margin: 40px auto 0px;
+      position: relative;
+      display: flex;
+      &__image {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: gray;
+        position: absolute;
+        top: 20px;
+        left: 50px;
+      }
+      &__text {
+        width: 900px;
+        margin-left: 200px;
+        span {
+          line-height: 150px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
