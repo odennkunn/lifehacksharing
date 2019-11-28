@@ -1,12 +1,16 @@
-<section class="card">
-  <a href = "">
-    <img class="card__img" src="https://publicdomainq.net/images/201710/07s/publicdomainq-0014143ddc.jpg" alt="">
-    <div class="card__content">
-      <h1 class="card__text">title</h1>
-    </div>
-    <div class = "card__likes">
-      <i class="fas fa-heart"></i>
-      <p>3</p>
-    </div>
-  </a>
-</section>
+<% @articles.each do |article| %>
+  <section class="card">
+    <a href = "">
+      <%= image_tag article.image.url, class: 'card__img' %>
+      <div class="card__content">
+        <h1 class="card__text">
+          <%= article.title %>
+        </h1>
+      </div>
+      <div class = "card__likes">
+        <i class="fas fa-heart"></i>
+        <p>3</p>
+      </div>
+    </a>
+  </section>
+<% end %>
