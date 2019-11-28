@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  before_action :set_article, only: [:show, :edit]
+  before_action :set_article, only: [:show, :edit, :destroy, :update]
   
   def index
     @articles = Article.includes(:user).page(params[:page]).per(10).order("created_at DESC")
@@ -23,11 +23,19 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    if @article.user_id == current_user.id
+      @article.destroy
+    end
   end
 
   def edit
   end
 
+  def update
+  end
+
+  def dele
+  end
 
   private
   def article_params

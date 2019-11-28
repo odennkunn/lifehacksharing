@@ -8,6 +8,11 @@ Rails.application.routes.draw do
 
   root to: 'top#index'
 
-  resources :articles
+  resources :articles do
+    collection do
+      get 'dele'
+    end
+  end
+
   resources :users
 end

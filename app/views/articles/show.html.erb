@@ -8,6 +8,11 @@
     <%= simple_format(@article.title) %>
   </div>
 
+  <% if user_signed_in? && current_user.id == @article.user_id %>
+    <%= link_to 'この記事を削除する', "/articles/#{@article.id}", method: :delete %>
+    <%= link_to 'この記事を編集する', edit_article_path, method: :get %>
+  <% end %>
+
   <div class = 'main__image'>
     <div class = 'main__image__box'>
       <%= image_tag @article.image.url, class: 'main__image__box--pic'%>
