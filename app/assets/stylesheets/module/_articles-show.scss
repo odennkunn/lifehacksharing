@@ -25,7 +25,7 @@
   &__text {
     width: 700px;
     height: 200px;
-    margin: 20px auto 40px;
+    margin: 20px auto 0px;
   }
   hr {
     size: 1000px;
@@ -65,5 +65,43 @@
         }
       }
     }
+  }
+
+  .gnav {
+    width: 400px;
+    height: 2rem;
+    position: absolute;
+    right: 50px;
+    li {
+      list-style: none;
+      position: relative;
+      a {
+        background: #001b34;
+        border-right: 1px solid #eee;
+        color: #fff;
+        display: block;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+      }
+      li {
+        height: 0;
+        overflow: hidden;
+        transition: .5s;
+        a {
+          border-top: 1px solid #eee;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .gnav > li {
+    width: 25%;
+  }
+  .gnav li:hover > ul > li {
+    height: 2rem;
+    overflow: visible;
   }
 }
