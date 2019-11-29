@@ -21,6 +21,7 @@
   */</style>
 
   <div class = 'arrival'>
-    <span>新着記事</span>
+    <span class = 'arrival__text'>新着記事</span>
     <%= render partial: 'shared/card' %>
+    <%= paginate(@articles) %>
 </div>

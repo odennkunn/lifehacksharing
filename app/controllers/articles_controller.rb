@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :destroy, :update]
   
   def index
-    @articles = Article.includes(:user).page(params[:page]).per(10).order("created_at DESC")
+    @articles = Article.includes(:user).page(params[:page]).per(6).order("created_at DESC")
   end
 
   def new
