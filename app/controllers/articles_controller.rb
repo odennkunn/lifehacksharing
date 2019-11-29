@@ -32,6 +32,11 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    if @article.update(article_params)
+      redirect_to articles_path
+    else
+      redirect_to edit_article_path
+    end
   end
 
   def dele
