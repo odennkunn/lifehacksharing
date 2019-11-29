@@ -7,7 +7,7 @@
 
 // トップページ 記事周り
 @mixin box {
-  height: 600px;
+  height: 100%;
   width: 1200px;
   margin: 0 auto;
   border-bottom: solid;
@@ -15,6 +15,7 @@
   border-color: #DDDDDD;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
 }
 
 @mixin title-text {
@@ -33,6 +34,7 @@
   box-shadow: 0 2px 5px #ccc;
   position: relative;
   display: inline-block;
+  margin-top: 60px;
 }
 
 @mixin card-img {

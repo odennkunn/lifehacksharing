@@ -13,7 +13,7 @@
     <ul class = 'gnav'>
       <li><a href=''><i class="fas fa-chevron-down"></i></a>
         <ul>
-          <li><%= link_to 'この記事を削除する', '/articles/#{@article.id}', method: :delete %></li>
+          <li><%= link_to 'この記事を削除する', "/articles/#{@article.id}", method: :delete %></li>
           <li><%= link_to 'この記事を編集する', edit_article_path, method: :get %></li>
         </ul>
       </li>
