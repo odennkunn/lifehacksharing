@@ -8,19 +8,17 @@
     <%= simple_format(@article.title) %>
   </div>
 
+  
   <% if user_signed_in? && current_user.id == @article.user_id %>
-    <%= link_to 'この記事を削除する', "/articles/#{@article.id}", method: :delete %>
-    <%= link_to 'この記事を編集する', edit_article_path, method: :get %>
+    <ul class = 'gnav'>
+      <li><a href=''><i class="fas fa-chevron-down"></i></a>
+        <ul>
+          <li><%= link_to 'この記事を削除する', '/articles/#{@article.id}', method: :delete %></li>
+          <li><%= link_to 'この記事を編集する', edit_article_path, method: :get %></li>
+        </ul>
+      </li>
+    </ul>
   <% end %>
-
-  <ul class = 'gnav'>
-    <li><a href="">menu</a>
-      <ul>
-        <li><%= link_to 'この記事を削除する', "/articles/#{@article.id}", method: :delete %></li>
-        <li><%= link_to 'この記事を編集する', edit_article_path, method: :get %></li>
-      </ul>
-    </li>
-  </ul>
 
   <div class = 'main__image'>
     <div class = 'main__image__box'>

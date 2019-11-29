@@ -1,30 +1,29 @@
-<div class = "header__contents">
+<div class = 'header__contents'>
   <%= link_to 'LHS', articles_path %>
 </div>
-<div class = "header__search">
-  <form action = "" id = "search-form" method = "post">
-    <input type = "text" id = "search-field" placeholder = "キーワードを入力"/>
-    <input type = "submit"  id = "search-btn" value = "検索" />
+<div class = 'header__search'>
+  <form action = '' id = 'search-form' method = 'post'>
+    <input type = 'text' id = 'search-field' placeholder = 'キーワードを入力'/>
+    <input type = 'submit'  id = 'search-btn' value = '検索' />
   </form>
 </div>
 <% if user_signed_in? %>
-<div class = "header__name">
-  <span><%= current_user.nickname %>さん</span>
-</div>
-<div class = "header__new">
-  <%= link_to '投稿する', new_article_path %>
-</div>
-<div class = "header__create">
-  <%= link_to 'マイページ', user_path(current_user) %>
-</div>
-<div class = "header__btn">
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'post'%>
-</div>
+<ul class = 'menu'>
+  <li><a href=''><%= current_user.nickname %>さん</a>
+    <ul>
+      <li><%= link_to '投稿する', new_article_path %></li>
+      <li><%= link_to 'マイページ', user_path(current_user) %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'post'%></li>
+    </ul>
+  </li>
+</ul>
 <% else %>
-<div class = "header__btn">
-  <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-</div>
-<div class = "header__create">
-  <%= link_to "新規登録", new_user_registration_path, class: 'post'%>
-</div>
+<ul class = 'menu'>
+  <li><i class='fas fa-align-justify'></i>
+    <ul>
+      <li><%= link_to 'ログイン', new_user_session_path, class: 'post' %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: 'post'%></li>
+    </ul>
+  </li>
+</ul>
 <% end %>

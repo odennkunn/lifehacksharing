@@ -1,9 +1,9 @@
-<div class = "header">
+<div class = 'header'>
   <%= render partial: 'shared/header'%>
 </div>
 
-<div class = "postbox">
-  <div class = "postbox__card">
+<div class = 'postbox'>
+  <div class = 'postbox__card'>
   <%= form_with model: @article, local: true, method: :patch do |f| %>
     <div class = 'label'>
       <h3>写真</h3>

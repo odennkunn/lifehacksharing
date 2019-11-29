@@ -19,7 +19,7 @@
   - 画像アップロード機能
   - いいね機能
 
-## application technology
+## Application Technology
 |種別|名称|
 |------|----|
 |開発言語|Ruby(ver.2.5.1)|
