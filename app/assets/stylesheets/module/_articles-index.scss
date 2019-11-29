@@ -89,6 +89,44 @@
       @include btn-blue;
     }
   }
+
+  .menu {
+    width: 400px;
+    height: 70px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    li {
+      list-style: none;
+      position: relative;
+      
+      a {
+        display: block;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        color: gray;
+        border: solid 1px gray;
+      }
+      li {
+        height: 0;
+        overflow: hidden;
+        transition: .5s;
+        a {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .menu > li {
+    width: 25%;
+  }
+  .menu li:hover > ul > li {
+    height: 2rem;
+    overflow: visible;
+  }
 }
 
 .contents{
