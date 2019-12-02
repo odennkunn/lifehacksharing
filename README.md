@@ -36,7 +36,8 @@
 # DataBase
 
 ## Entity Relationship Diagram
-<img width="627" alt="スクリーンショット 2019-11-25 22 01 23" src="https://user-images.githubusercontent.com/55783692/69542659-45af8880-0fcf-11ea-822f-2d9a4f0a1fba.png">
+<img width="831" alt="スクリーンショット 2019-11-29 22 12 03" src="https://user-images.githubusercontent.com/55783692/69871227-9687ef80-12f5-11ea-91e8-568de0c7f1c8.png">
+
 
 ### users table
 |Column|Type|Options|
