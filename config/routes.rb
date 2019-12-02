@@ -5,9 +5,7 @@ Rails.application.routes.draw do
   root to: 'top#index'
 
   resources :articles do
-    collection do
-      get 'dele'
-    end
+    resources :comments, only: [:create]
   end
 
   resources :users
