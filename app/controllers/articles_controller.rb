@@ -20,6 +20,7 @@ class ArticlesController < ApplicationController
   end
 
   def show 
+    @comments = @article.comments.includes(:user)
   end
 
   def destroy
