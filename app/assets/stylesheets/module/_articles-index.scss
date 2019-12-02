@@ -194,6 +194,9 @@
     }
     .card {
       @include card-body;
+      opacity: 0;
+      transition: 1s;
+      margin-top: 500px;
       &__img {
         @include card-img;
       }
@@ -215,6 +218,10 @@
       a {
         text-decoration: none;
       }
+    }
+    .card.showUp {
+      opacity: 1;
+      margin-top: 50px;
     }
     .pagination {
       position: absolute;
