@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-
   before_action :set_article, only: [:show, :edit, :destroy, :update]
   
   def index
@@ -40,7 +39,8 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def dele
+  def search
+    @articles = Article.where('title LIKE(?)', "%#{params[:keyword]}%").limit(20)
   end
 
   private

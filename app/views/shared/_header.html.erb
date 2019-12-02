@@ -2,10 +2,10 @@
   <%= link_to 'LHS', articles_path %>
 </div>
 <div class = 'header__search'>
-  <form action = '' id = 'search-form' method = 'post'>
+  <%= form_tag('/articles/search', method: :get) do %>
     <input type = 'text' id = 'search-field' placeholder = 'キーワードを入力'/>
-    <input type = 'submit'  id = 'search-btn' value = '検索' />
-  </form>
+    <button title="search" type="submit" id='search-btn'>検索</button>
+  <% end %>
 </div>
 <% if user_signed_in? %>
 <ul class = 'menu'>

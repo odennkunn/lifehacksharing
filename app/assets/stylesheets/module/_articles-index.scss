@@ -22,23 +22,24 @@
     position: absolute;
     top: 15px;
     right: 650px;
-    #search-form{
-      #search-field {
-        width: 300px;
-        height: 35px;
-        background-color: #EEEEEE;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-      }
-      #search-btn {
-        width: 70px;
-        height: 35px;
-        border-style: none;
-        border: solid;
-        border-color: $dark-blue;
-        border-width: 1px;
-        color: $dark-blue;
-      }
+    display: flex;
+    #search-field {
+      width: 300px;
+      height: 35px;
+      background-color: #EEEEEE;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      display: inline-block;
+    }
+    #search-btn {
+      width: 70px;
+      height: 35px;
+      display: inline-block;
+      border: solid;
+      border-color: $dark-blue;
+      border-width: 1px;
+      color: $dark-blue;
+      font-size: 15px;
     }
   }
   &__name {
