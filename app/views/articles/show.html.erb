@@ -32,17 +32,35 @@
 
   <hr>
 
+  <div class = 'main__form'>
+    <% if current_user %>
+      <%= form_tag("/articles/#{@article.id}/comments", method: :post) do %>
+        <textarea name="text" placeholder="ライフハック術を実践した感想などを描いてください" class = 'comment-form'></textarea>
+        <input type="submit" value="コメントする" class = 'comment-send'>
+      <% end %>
+    <% end %>
+  </div>
+
   <div class = 'main__index'>
     <span>コメント一覧</span>
   </div>
 
-  <div class = 'main__comment'>
-    <div class = 'main__comment__user'>
-      <div class = 'main__comment__user__image'>
+  <% if @comments %>
+    <% @comments.each do |comment| %>
+      <div class = 'main__comment'>
+        <div class = 'main__comment__user'>
+          <div class = 'main__comment__user__name'>
+            <span><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %><span>
+          </div>
+          <div class = 'main__comment__user__image'>
+          </div>
+          <div class = 'main__comment__user__text'>
+            <span><%= comment.text %></span>
+          </div>
+        </div>
       </div>
-      <div class = 'main__comment__user__text'>
-        <span>なかなかいいアイデアですね！！</span>
-      </div>
-    </div>
-  </div>
+    <% end %>
+  <% end %> 
+
+
 </div>

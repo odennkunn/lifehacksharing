@@ -47,6 +47,12 @@
       margin: 40px auto 0px;
       position: relative;
       display: flex;
+      &__name {
+        font-weight: bold;
+        position: absolute;
+        left: 200px;
+        top: 20px;
+      }
       &__image {
         height: 100px;
         width: 100px;
