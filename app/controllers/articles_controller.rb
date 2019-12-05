@@ -1,10 +1,10 @@
 class ArticlesController < ApplicationController
   
   before_action :set_article, only: [:show, :edit, :destroy, :update]
-  before_action :authenticate_user!, except: [:index, :show, :search]
+  before_action :authenticate_user!, except: [:index, :show, :search, :cook, :beauty, :clean, :other]
+  before_action :page_article, only: [:index, :cook, :beauty, :clean, :other]
 
   def index
-    @articles = Article.includes(:user).page(params[:page]).per(6).order("created_at DESC")
   end
 
   def new
@@ -41,11 +41,26 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def cook
+  end
+
+  def beauty
+  end
+
+  def clean
+  end
+
+  def other
+  end
+
+
   def search
     @articles = Article.where('title LIKE(?)', "%#{params[:keyword]}%").limit(20)
   end
 
   private
+
+
   def article_params
     params.require(:article).permit(:title, :image, :text, :category).merge(user_id: current_user.id)
   end
@@ -53,5 +68,10 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
+
+  def page_article
+    @articles = Article.includes(:user).page(params[:page]).per(6).order("created_at DESC")
+  end
+
 
 end
