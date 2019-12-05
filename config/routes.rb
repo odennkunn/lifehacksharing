@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
     collection do
       get 'search'
+      get 'cook'
+      get 'clean'
+      get 'beauty'
+      get 'other'
     end
   end
 
