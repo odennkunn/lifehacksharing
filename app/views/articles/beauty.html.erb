@@ -1,0 +1,27 @@
+<div class = 'header'>
+  <%= render partial: 'shared/header'%>
+</div>
+
+<div class = 'contents'>
+  <div class = 'filters'>
+    <ul class = 'filters__category'>
+      <li><%= link_to 'All', articles_path %></li>
+      <li><%= link_to 'Cook', cook_articles_path %></li>
+      <li><%= link_to 'Clean', clean_articles_path %></li>
+      <li><%= link_to 'Beauty', beauty_articles_path %></li>
+      <li><%= link_to 'Other', other_articles_path %></li>
+    </ul>
+  </div>
+
+  <style>/*
+  <div class = "popular">
+    <span>人気投稿</span>
+    <%= render partial: 'shared/card'%>
+  </div>
+  */</style>
+
+  <div class = 'arrival'>
+    <span class = 'arrival__text'>新着記事</span>
+    <%= render partial: 'shared/beauty-card' %>
+    <%= paginate(@articles) %>
+</div>
