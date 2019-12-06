@@ -34,7 +34,7 @@
 
   <div class = 'main__form'>
     <% if current_user %>
-      <%= form_tag("/articles/#{@article.id}/comments", method: :post) do %>
+      <%= form_tag("/articles/#{@article.id}/comments", method: :post, id: "new_comment") do %>
         <textarea name="text" placeholder="ライフハック術を実践した感想などを描いてください" class = 'comment-form'></textarea>
         <input type="submit" value="コメントする" class = 'comment-send'>
       <% end %>
