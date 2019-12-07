@@ -53,6 +53,10 @@ class ArticlesController < ApplicationController
   def other
   end
 
+  def rank
+    @articles = Article.includes(:user).page(params[:page]).per(6).order("likes_count DESC")
+  end
+
 
   def search
     @articles = Article.where('title LIKE(?)', "%#{params[:keyword]}%").limit(20)

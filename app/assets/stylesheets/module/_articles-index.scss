@@ -132,7 +132,7 @@
 
 .contents{
   background-color: $back-gray;
-  height: 100%;
+  height: 1200px;
   width: 100%;
 //カテゴリー選択部分
   .filters {
@@ -151,38 +151,6 @@
       a {
         text-decoration: none;
         color: $dark-blue;
-      }
-    }
-  }
-
-  //人気投稿一覧部分
-  .popular {
-    @include box;
-    span {
-      @include title-text
-    }
-    .card {
-      @include card-body;
-      &__img {
-        @include card-img;
-      }
-      &__content {
-        padding-top: 10px;
-      }
-      &__text {
-        @include card-text
-      }
-      &__likes {
-        @include card-likes;
-        i {
-          @include card-icon;
-        }
-        p {
-          font-size: 18px;
-        }
-      }
-      a {
-        text-decoration: none;
       }
     }
   }
