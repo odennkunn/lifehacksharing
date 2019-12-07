@@ -196,7 +196,7 @@
     .card {
       @include card-body;
       opacity: 0;
-      transition: 2s;
+      transition: 1s;
       margin-top: 500px;
       &__img {
         @include card-img;
@@ -220,6 +220,10 @@
       a {
         text-decoration: none;
       }
+    }
+    .card:hover {
+      box-shadow:0 6px 14px rgba(0, 0, 0, 0.24);
+      transform:translate(0, -2px);
     }
     .card.showUp {
       opacity: 1;
