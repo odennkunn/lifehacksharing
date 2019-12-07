@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get 'clean'
       get 'beauty'
       get 'other'
+      get 'rank'
     end
   end
 
