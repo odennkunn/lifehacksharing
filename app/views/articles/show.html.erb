@@ -41,6 +41,11 @@
     <% end %>
   </div>
 
+  <div  class = 'main__like' id = "like-<%= @article.id %>">
+    <%= render partial: 'shared/like' , locals: { article: @article } %>
+  </div>
+
+
   <div class = 'main__index'>
     <span>コメント一覧</span>
   </div>

@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:show]
+
+  post '/articles/:article_id/likes' => "likes#create"
+  delete '/articles/:article_id/likes' => "likes#destroy"
 end

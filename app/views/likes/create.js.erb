@@ -1,0 +1,1 @@
+$("#like-<%= @article.id %>").html("<%= j(render partial: 'shared/like', locals: { article: @article }) %>");
