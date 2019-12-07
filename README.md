@@ -36,7 +36,8 @@
 # DataBase
 
 ## Entity Relationship Diagram
-<img width="831" alt="スクリーンショット 2019-11-29 22 12 03" src="https://user-images.githubusercontent.com/55783692/69871227-9687ef80-12f5-11ea-91e8-568de0c7f1c8.png">
+<img width="772" alt="スクリーンショット 2019-12-07 15 39 33" src="https://user-images.githubusercontent.com/55783692/70370234-e83d0500-1907-11ea-8677-cabacac2659b.png">
+
 
 
 ### users table
@@ -57,11 +58,11 @@
 |text|text|null: false|
 |image|string|null: false|
 |user_id|references|foreign_key: true|
-|category_id|references|foreign_key: true|
+|category|integer|null: false|
+|likes_count|integer|
 
 #### association
   - belongs_to :user
-  - belongs_to :category
   - has_many :comments, dependent: :destroy
   - has_many :likes, dependent: :destroy
 
@@ -76,19 +77,12 @@
   - belongs_to :user
   - belongs_to :article
 
-### categories table
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-
-#### association
-  - has_many :articles
 
 ### likes table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|foreign_key: true|
-|article_id|references|foreign_key: true|
+|user_id|integer|
+|article_id|integer|
 
 #### association
   - belongs_to :user
