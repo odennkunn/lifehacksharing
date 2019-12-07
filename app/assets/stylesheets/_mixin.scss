@@ -7,12 +7,8 @@
 
 // トップページ 記事周り
 @mixin box {
-  height: 100%;
   width: 1200px;
   margin: 0 auto;
-  border-bottom: solid;
-  border-width: 1px;
-  border-color: #DDDDDD;
   position: relative;
   display: flex;
   flex-wrap: wrap;
