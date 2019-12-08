@@ -42,9 +42,11 @@
   </div>
 
 <% if user_signed_in? %>
-  <div  class = 'main__like' id = "like-<%= @article.id %>">
-    <%= render partial: 'shared/like' , locals: { article: @article } %>
-  </div>
+  <% unless @article.user_id == current_user.id%>
+    <div  class = 'main__like' id = "like-<%= @article.id %>">
+      <%= render partial: 'shared/like' , locals: { article: @article } %>
+    </div>
+  <% end %>
 <% end %>
 
 
