@@ -41,9 +41,11 @@
     <% end %>
   </div>
 
+<% if user_signed_in? %>
   <div  class = 'main__like' id = "like-<%= @article.id %>">
     <%= render partial: 'shared/like' , locals: { article: @article } %>
   </div>
+<% end %>
 
 
   <div class = 'main__index'>
