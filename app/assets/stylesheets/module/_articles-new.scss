@@ -14,12 +14,12 @@
 //フォーム部分
 .postbox {
   width: 100vw;
-  height: 1100px;
+  height: 1200px;
   background-color: $back-gray;
   position: relative;
   &__card {
     width: 800px;
-    height: 1000px;
+    height: 1100px;
     background-color: white;
     position: absolute;
     top: 40px;
@@ -76,7 +76,7 @@
     }
     .post-input {
       margin: 20px 30px;
-      width: 470px;
+      width: 730px;
       height: 40px;
       @include input-radius;
     }
