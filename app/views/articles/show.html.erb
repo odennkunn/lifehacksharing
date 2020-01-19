@@ -32,14 +32,14 @@
 
   <hr>
 
-  <div class = 'main__form'>
-    <% if current_user %>
+  <% if current_user %>
+    <div class = 'main__form'>
       <%= form_tag("/articles/#{@article.id}/comments", method: :post, id: "new_comment") do %>
         <textarea name="text" placeholder="ライフハック術を実践した感想などを描いてください" class = 'comment-form'></textarea>
         <input type="submit" value="コメントする" class = 'comment-send'>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 
 <% if user_signed_in? %>
   <% unless @article.user_id == current_user.id%>
