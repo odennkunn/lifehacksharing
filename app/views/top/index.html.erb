@@ -1,18 +1,31 @@
-<div class = 'title'>
-  <h1>LHS</h1>
-  <h2>Life Hack Sharing</h2>
-  <p class = 'about'>ここで扱うライフハックとは,豆知識的な便利術を進化させたものです。<br>
+<div class = 'f-title'>
+  <div class = 'f-title__top'>
+    <div class = 'f-title__top__logo'>
+      <i class="far fa-lightbulb"></i>
+      <span>LHS</span>
+    </div>
+    <nav class = 'f-title__top__navigation'>
+      <div class = 'f-title__top__navigation__first'>
+        <%= link_to 'start', '/articles', class: 'f-title__top__navigation__first--start'%>
+      </div>
+      <div class = 'f-title__top__navigation__second'>
+        <%= link_to 'login', new_user_session_path, class: 'f-title__top__navigation__second--login'%>
+      </div>
+      <div class = 'f-title__top__navigation__third'>
+        <i class="fas fa-user"></i>
+        <%= link_to 'sign up', new_user_registration_path, class: 'f-title__top__navigation__third--signup'%>
+      </div>
+    </nav>
+  </div>
+  <div class = 'f-title__text'>
+    <div class = 'f-title__text__high'>
+      <span class = 'f-title__text__high--share'>Sharing</span>
+    </div>
+    <div class = 'f-title__text__bottom'>
+      <span class = 'f-title__text__high--idea'>Your idea</span>
+    </div>
+    <p class = 'f-title__text__about'>ここで扱うライフハックとは,豆知識的な便利術を進化させたものです。<br>
   LHSは日常生活での「困った」を解決してくれる様々なライフハックを投稿、共有するサイトです。
   </p>
-  <div class = 'btnlist'>
-    <div class = 'btnlist__continue'>
-      <%= link_to 'アカウントを作成せず始める', '/articles', class: 'btnlist__continue--start'%>
-    </div>
-    <div class = 'btnlist__continue'>
-      <%= link_to '新規登録', new_user_registration_path, class: 'btnlist__continue--signup'%>
-    </div>
-    <div class = 'btnlist__continue'>
-      <%= link_to 'ログイン', new_user_session_path, class: 'btnlist__continue--login'%>
-    </div>
   </div>
 </div>
