@@ -1,4 +1,31 @@
 <% @articles.category_Clean.each do |article| %>
+  <a href='/articles/<%= article.id %>'>
+    <div class = 'f-cards'>
+      <%= image_tag article.image.url, class: 'f-cards__img' %>
+        <div class = 'f-cards__img__box'>
+          <p class = 'f-cards__img__box__title'><%= article.title %></p>
+          <div class = 'f-cards__img__box__count'>
+          <i class="far fa-heart" id = 'f-heart'></i>
+          <% if article.likes_count.present? %>
+            <span><%= article.likes_count %></span>
+          <% else %>
+            <span>0</span>
+          <% end%>
+          <i class="far fa-comment-dots" id = 'f-comment'></i>
+          <% if article.comments.length.present? %>
+            <span><%= article.comments.length %></span>
+          <% else %>
+            <span>0</span>
+          <% end %>
+          </div>
+        </div>
+    </div>
+  </a>
+<% end %>
+
+
+<style>/*
+<% @articles.category_Clean.each do |article| %>
   <section class='card'>
     <a href='/articles/<%= article.id %>'>
       <%= image_tag article.image.url, class: 'card__img' %>
@@ -18,3 +45,4 @@
     </a>
   </section>
 <% end %>
+*/</style>
