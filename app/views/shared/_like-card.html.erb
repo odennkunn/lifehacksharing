@@ -1,4 +1,31 @@
 <% @likes.each do |like| %>
+  <a href='/articles/<%= like.article.id %>'>
+    <div class = 'f-cards'>
+      <%= image_tag like.article.image.url, class: 'f-cards__img' %>
+        <div class = 'f-cards__img__box'>
+          <p class = 'f-cards__img__box__title'><%= like.article.title %></p>
+          <div class = 'f-cards__img__box__count'>
+          <i class="far fa-heart" id = 'f-heart'></i>
+          <% if article.likes_count.present? %>
+            <span><%= like.article.likes_count %></span>
+          <% else %>
+            <span>0</span>
+          <% end%>
+          <i class="far fa-comment-dots" id = 'f-comment'></i>
+          <% if like.article.comments.length.present? %>
+            <span><%= like.article.comments.length %></span>
+          <% else %>
+            <span>0</span>
+          <% end %>
+          </div>
+        </div>
+    </div>
+  </a>
+<% end %>
+
+
+<style>/*
+<% @likes.each do |like| %>
   <section class='card'>
     <a href='/articles/<%= like.article.id %>'>
       <%= image_tag like.article.image.url, class: 'card__img' %>
@@ -18,3 +45,4 @@
     </a>
   </section>
 <% end %>
+*/</style>
