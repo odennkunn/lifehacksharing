@@ -21,6 +21,7 @@
         font-weight: 900;
         color: #0066FF;
         padding-left: 20px;
+        font-family: 'Alata', sans-serif;
       }
     }
     &__navigation {
@@ -112,14 +113,14 @@
     padding-top: 30px;
     &__high {
       color: white;
-      font-weight: bold;
+      font-family: 'Ropa Sans', sans-serif;
       text-align: center;
-      font-size: 150px;
+      font-size: 170px;
     }
     &__bottom {
       color: #0066FF;
-      font-size: 150px;
-      font-weight: bold;
+      font-size: 170px;
+      font-family: 'Ropa Sans', sans-serif;
       text-align: center;
     }
     &__about {
