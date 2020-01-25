@@ -1,3 +1,23 @@
+<%= render partial: 'shared/f-header'%>
+
+<%= render partial: 'shared/f-intro'%>
+
+<%= render partial: 'shared/f-category'%>
+
+<div class = 'f-index'>
+  <span class = 'f-index__title'>
+    Articles
+  </span>
+</div>
+
+<div class = 'f-contents'>
+  <%= render partial: 'shared/f-card' %>
+  <%= paginate(@articles) %>
+</div>
+
+
+
+<style>/*
 <div class = 'header'>
   <%= render partial: 'shared/header'%>
 </div>
@@ -18,4 +38,6 @@
     <span class = 'arrival__text'>新着記事</span>
     <%= render partial: 'shared/card' %>
     <%= paginate(@articles) %>
+  </div>
 </div>
+*/</style>
