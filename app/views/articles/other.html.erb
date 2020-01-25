@@ -1,21 +1,16 @@
-<div class = 'header'>
-  <%= render partial: 'shared/header'%>
+<%= render partial: 'shared/f-header'%>
+
+<%= render partial: 'shared/f-intro'%>
+
+<%= render partial: 'shared/f-category'%>
+
+<div class = 'f-index'>
+  <span class = 'f-index__title'>
+    Articles
+  </span>
 </div>
 
-<div class = 'contents'>
-  <div class = 'filters'>
-    <ul class = 'filters__category'>
-      <li><%= link_to 'All', articles_path %></li>
-      <li><%= link_to 'Cook', cook_articles_path %></li>
-      <li><%= link_to 'Clean', clean_articles_path %></li>
-      <li><%= link_to 'Beauty', beauty_articles_path %></li>
-      <li><%= link_to 'Other', other_articles_path %></li>
-      <li><%= link_to 'Ranking', rank_articles_path %></li>
-    </ul>
-  </div>
-
-  <div class = 'arrival'>
-    <span class = 'arrival__text'>新着記事</span>
-    <%= render partial: 'shared/other-card' %>
-    <%= paginate(@articles) %>
+<div class = 'f-contents'>
+  <%= render partial: 'shared/other-card' %>
+  <%= paginate(@articles) %>
 </div>

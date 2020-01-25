@@ -1,0 +1,35 @@
+<div class = 'f-header'>
+  <div class = 'f-header__contents'>
+    <%= link_to 'LHS', articles_path %>
+  </div>
+
+  <body class="drawer drawer--left">
+    <header role="banner">
+      <button type="button" class="drawer-toggle drawer-hamburger" id = 'f-hamburger'>
+        <span class="sr-only">toggle navigation</span>
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu">
+          <% if user_signed_in? %>
+            <li><a href='' class= 'drawer-brand'><%= current_user.nickname %>さん</a></li>
+            <li><%= link_to 'トップへ', articles_path, class: "drawer-menu-item"%></li>
+            <li><%= link_to '投稿する', new_article_path, class: "drawer-menu-item"%></li>
+            <li><%= link_to 'マイページ', user_path(current_user), class: "drawer-menu-item" %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'drawer-menu-item'%></li>
+          <% else %>
+            <li><%= link_to 'ログイン', new_user_session_path, class: 'drawer-menu-item' %></li>
+            <li><%= link_to '新規登録', new_user_registration_path, class: 'drawer-menu-item'%></li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+  </body>
+
+  <%= form_tag('/articles/search', method: :get) do %>
+    <input type = "search" id= 'search-field'>
+    <button title="search" type="submit" id='search-btn'>
+      <i class="fa fa-search"></i>
+    </button>
+  <% end %>
+</div>

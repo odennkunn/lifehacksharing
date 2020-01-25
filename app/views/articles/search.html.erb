@@ -1,12 +1,11 @@
-<div class = 'header'>
-  <%= render partial: 'shared/header'%>
+<%= render partial: 'shared/f-header'%>
+
+<div class = 'f-index'>
+  <span class = 'f-index__title'>
+    Results
+  </span>
 </div>
 
-<div class = 'search'>
-  <div class = 'search__title'>
-    <span>検索結果</span>
-  </div>
-  <div class = 'search__result'>
-    <%= render partial: 'shared/card' %>
-  </div>
+<div class = 'f-contents'>
+  <%= render partial: 'shared/f-card' %>
 </div>

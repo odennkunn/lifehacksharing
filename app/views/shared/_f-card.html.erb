@@ -1,4 +1,4 @@
-<% @articles.category_Beauty.each do |article| %>
+<% @articles.each do |article| %>
   <a href='/articles/<%= article.id %>'>
     <div class = 'f-cards'>
       <%= image_tag article.image.url, class: 'f-cards__img' %>
@@ -22,27 +22,3 @@
     </div>
   </a>
 <% end %>
-
-
-<style>/*
-<% @articles.category_Beauty.each do |article| %>
-  <section class='card'>
-    <a href='/articles/<%= article.id %>'>
-      <%= image_tag article.image.url, class: 'card__img' %>
-      <div class='card__content'>
-        <h1 class='card__text'>
-          <%= article.title %>
-        </h1>
-      </div>
-      <div class = 'card__likes'>
-        <i class='fas fa-heart'></i>
-        <% if article.likes_count.present? %>
-          <p><%= article.likes_count %></p>
-        <% else %>
-          <p>0</p>
-        <% end %>
-      </div>
-    </a>
-  </section>
-<% end %>
-*/</style>

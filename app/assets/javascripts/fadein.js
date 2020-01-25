@@ -1,5 +1,5 @@
 $(function() {
   $(document).on('turbolinks:load', function() {
-    $('.card').addClass('showUp');
+    $('.f-cards').addClass('showUp');
   })
 });

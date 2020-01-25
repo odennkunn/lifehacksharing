@@ -1,9 +1,216 @@
-.fixheader {
-  width: 100%;
+//ヘッダー部分
+.f-header {
+  width: 100vw;
   height: 70px;
-  border: solid;
-  &__logo {
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 8px gray;
+  &__contents {
+  width: 100px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  a {
+    text-decoration: none;
     color:$dark-blue;
-    
+    font-family: 'Alata', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    }
   }
+  //検索フォーム部分
+  form{
+    position: relative;
+    top: 50%;
+    left: 1100px;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border: 4px solid white;
+    padding: 5px;
+    #search-field{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;;
+      height: 42.5px;
+      line-height: 30px;
+      outline: 0;
+      border: 0;
+      display: none;
+      font-size: 1em;
+      padding: 0 20px;
+    }
+    #search-btn {
+      border-style: none;
+      .fa{
+        box-sizing: border-box;
+        padding: 12px;
+        width: 42.5px;
+        height: 42.5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+        color: 	#BBBBBB;
+        text-align: center;
+        font-size: 1.8em;
+        transition: all 1s;
+      }
+    }
+  }
+  form:hover{
+    width: 300px;
+    cursor: pointer;
+    border-bottom: 1px solid 	#EEEEEE;
+  }
+
+  form:hover #search-field{
+    display: block;
+  }
+
+  form:hover .fa{
+    background: $dark-blue;
+    color: white;
+  }
+
+  //drawer部分
+  #f-hamburger {
+    padding-left: 100px;
+    padding-top: 25px;
+  }
+}
+
+//画像部分
+.f-image {
+  width: 100vw;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80");
+  &__one {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 90px;
+    &--text {
+      font-family: 'Sawarabi Gothic', sans-serif;
+      font-weight: bold;
+    }
+  }
+  &__two {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    &--text {
+      font-family: 'Sawarabi Gothic', sans-serif;
+      font-weight: bold;
+    }
+  }
+}
+
+//カテゴリーフィルタ部分「
+.f-filters {
+  height: 60px;
+  width: 480px;
+  margin-top: 50px;
+  margin-left: 100px;
+  @include border-bottom;
+  &__category {
+    display: flex;
+    line-height: 60px;
+    li {
+      padding-left: 30px;
+    }
+    a {
+      text-decoration: none;
+      color: $dark-blue;
+    }
+    a:hover {
+      color: #DDDDDD;
+    }
+  }
+}
+
+//Articles文字部分
+.f-index {
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 110px;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #DDDDDD;
+  &__title {
+    font-weight: bold;
+    font-family: 'Alata', sans-serif;
+    font-size: 25px;
+  }
+}
+
+//記事本体部分
+.f-contents {
+  height: 100%;
+  width: 1240px;
+  margin: 0 auto 50px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  .f-cards {
+    width: 500px;
+    height: 500px;
+    transition: 0.5s;
+    box-shadow: 0 2px 5px #ccc;
+    margin-left: 80px;
+    margin-top: 50px;
+    position: relative;
+    &__img {
+      width: 500px;
+      height: 500px;
+      &__box {
+        height: 150px;
+        width: 400px;
+        background-color: white;
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        &__title {
+          margin: 30px 10px 0px;
+          font-size: 18px;
+          font-family: 'Sawarabi Gothic', sans-serif;
+          font-weight: bold;
+          color: #333333;
+        }
+        &__count {
+          margin-top: 25px;
+          margin-left: 300px;
+          width: 100px;
+          font-size: 18px;
+          #f-heart {
+            color: red;
+          }
+          #f-comment {
+            color: #666666;
+          }
+          span {
+            color: #333333;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .f-cards:hover {
+    box-shadow:0 6px 14px rgba(0, 0, 0, 0.3);
+    transform:translate(0, -2px);
+  }
+  .pagination {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+  }
+
 }
